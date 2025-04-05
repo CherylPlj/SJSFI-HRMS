@@ -1,0 +1,78 @@
+import Head from 'next/head';
+
+export default function Dashboard() {
+  return (
+    <>
+      <Head>
+        <title>Dashboard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        />
+      </Head>
+      <div className="flex h-screen bg-gray-100">
+{/* Sidebar */}
+<div className="bg-red-800 text-white w-64 p-4 flex flex-col">
+  <div className="flex items-center mb-6">
+    <span className="text-xl font-bold">SJSFI HRMS</span>
+  </div>
+  <nav className="flex-1">
+    <ul>
+      <li className="mb-4">
+        <a className="flex flex-col items-center text-white" href="#">
+        <i className="fas fa-tachometer-alt text-2xl mb-1"></i>        <span>Dashboard</span>
+        </a>
+      </li>
+      <li className="mb-4">
+        <a className="flex flex-col items-center text-white" href="#">
+          <i className="fas fa-users text-2xl mb-1"></i>
+          <span>Faculty</span>
+        </a>
+      </li>
+      <li className="mb-4">
+        <a className="flex flex-col items-center text-white" href="#">
+          <i className="fas fa-calendar-check text-2xl mb-1"></i>
+          <span>Attendance</span>
+        </a>
+      </li>
+      <li className="mb-4">
+        <a className="flex flex-col items-center text-white" href="#">
+          <i className="fas fa-user text-2xl mb-1"></i>
+          <span>Users</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div className="mt-auto">
+    <a className="flex flex-col items-center text-white" href="#">
+      <i className="fas fa-sign-out-alt text-2xl mb-1"></i>
+      <span>Log Out</span>
+    </a>
+  </div>
+</div>            
+        {/* Main Content */}
+        <div className="flex-1 p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-2xl font-bold">DASHBOARD</h1>
+            <div className="flex items-center space-x-4">
+              <i className="fas fa-comments text-xl"></i>
+              <i className="fas fa-bell text-xl"></i>
+              <i className="fas fa-user-circle text-xl"></i>
+              <div className="text-right">
+                <p className="font-bold">Jane Smith</p>
+                <p className="text-sm">2025-0001-SJSFI</p>
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+               
+  
+             
+            </div>
+          </div>
+        </div>
+     
+    </>
+  );
+}
