@@ -13,32 +13,34 @@ export default function Dashboard() {
       </Head>
       <div className="flex h-screen bg-gray-100 font-sans">
 {/* Sidebar */}
-<div className="bg-white w-64 p-6 flex flex-col justify-between border-r border-gray-200">
+<div className="bg-white w-20 p-4 flex flex-col justify-between border-r border-gray-200">
   <div>
-  <div className="text-2xl font-bold text-red-700 mb-8 flex items-center justify-center">SJSFI HRMS</div>    <nav className="space-y-4">
-      <a href="#" className="flex flex-col items-center text-red-700">
-        <i className="fas fa-tachometer-alt text-2xl mb-1"></i>
-        <span>Dashboard</span>
+    {/* Replace SJSFI HRMS with a logo */}
+    <img src="/SJSLOGO-removebg-preview.png" alt="Logo" className="w-10 h-10 mx-auto mb-6" />
+    <nav className="space-y-6">
+      <a href="#" className="flex flex-col items-center text-red-700" title="Dashboard">
+        <i className="fas fa-tachometer-alt text-xl"></i>
+        <span className="text-[10px]">Dashboard</span>
       </a>
-      <a href="#" className="flex flex-col items-center text-gray-700">
-        <i className="fas fa-user text-2xl mb-1"></i>
-        <span>Personal Data</span>
+      <a href="#" className="flex flex-col items-center text-gray-700" title="Personal Data">
+        <i className="fas fa-user text-xl"></i>
+        <span className="text-[10px]">Personal Data</span>
       </a>
-      <a href="#" className="flex flex-col items-center text-gray-700">
-        <i className="fas fa-file-alt text-2xl mb-1"></i>
-        <span>Documents</span>
+      <a href="#" className="flex flex-col items-center text-gray-700" title="Documents">
+        <i className="fas fa-file-alt text-xl"></i>
+        <span className="text-[10px]">Documents</span>
       </a>
-      <a href="#" className="flex flex-col items-center text-gray-700">
-        <i className="fas fa-calendar-check text-2xl mb-1"></i>
-        <span>Attendance</span>
+      <a href="#" className="flex flex-col items-center text-gray-700" title="Attendance">
+        <i className="fas fa-calendar-check text-xl"></i>
+        <span className="text-[10px]">Attendance</span>
       </a>
     </nav>
   </div>
-  <a href="#" className="flex flex-col items-center text-gray-700">
-    <i className="fas fa-sign-out-alt text-2xl mb-1"></i>
-    <span>Log Out</span>
+  <a href="#" className="flex flex-col items-center text-gray-700" title="Log Out">
+    <i className="fas fa-sign-out-alt text-xl"></i>
+    <span className="text-[10px]">Log Out</span>
   </a>
-</div>        
+</div>
 {/* Main Content */}
         <div className="flex-1 p-6">
           <div className="flex justify-between items-center mb-6">
