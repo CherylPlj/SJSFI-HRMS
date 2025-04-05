@@ -13,45 +13,47 @@ export default function Dashboard() {
       </Head>
       <div className="flex h-screen bg-gray-100">
 {/* Sidebar */}
-<div className="bg-red-800 text-white w-64 p-4 flex flex-col">
-  <div className="flex items-center mb-6">
-    <span className="text-xl font-bold">SJSFI HRMS</span>
+<div className="bg-red-800 text-white w-20 p-4 flex flex-col items-center">
+  <div className="mb-4">
+    {/* Replace SJS with a logo */}
+    <img src="/SJSLOGO-removebg-preview.png" alt="Logo" className="w-10 h-10" />
   </div>
   <nav className="flex-1">
-    <ul>
-      <li className="mb-4">
-        <a className="flex flex-col items-center text-white" href="#">
-        <i className="fas fa-tachometer-alt text-2xl mb-1"></i>        <span>Dashboard</span>
+    <ul className="space-y-4">
+      <li className="text-center">
+        <a className="flex flex-col items-center text-white" href="#" title="Dashboard">
+          <i className="fas fa-tachometer-alt text-xl"></i>
+          <span className="text-[10px]">Dashboard</span>
         </a>
       </li>
-      <li className="mb-4">
-        <a className="flex flex-col items-center text-white" href="#">
-          <i className="fas fa-users text-2xl mb-1"></i>
-          <span>Faculty</span>
+      <li className="text-center">
+        <a className="flex flex-col items-center text-white" href="#" title="Faculty">
+          <i className="fas fa-users text-xl"></i>
+          <span className="text-[10px]">Faculty</span>
         </a>
       </li>
-      <li className="mb-4">
-        <a className="flex flex-col items-center text-white" href="#">
-          <i className="fas fa-calendar-check text-2xl mb-1"></i>
-          <span>Attendance</span>
+      <li className="text-center">
+        <a className="flex flex-col items-center text-white" href="#" title="Attendance">
+          <i className="fas fa-calendar-check text-xl"></i>
+          <span className="text-[10px]">Attendance</span>
         </a>
       </li>
-      <li className="mb-4">
-        <a className="flex flex-col items-center text-white" href="#">
-          <i className="fas fa-user text-2xl mb-1"></i>
-          <span>Users</span>
+      <li className="text-center">
+        <a className="flex flex-col items-center text-white" href="#" title="Users">
+          <i className="fas fa-user text-xl"></i>
+          <span className="text-[10px]">Users</span>
         </a>
       </li>
     </ul>
   </nav>
-  <div className="mt-auto">
-    <a className="flex flex-col items-center text-white" href="#">
-      <i className="fas fa-sign-out-alt text-2xl mb-1"></i>
-      <span>Log Out</span>
+  <div className="mt-auto text-center">
+    <a className="flex flex-col items-center text-white" href="#" title="Log Out">
+      <i className="fas fa-sign-out-alt text-xl"></i>
+      <span className="text-[10px]">Log Out</span>
     </a>
   </div>
-</div>            
-        {/* Main Content */}
+</div>
+{/* Main Content */}
         <div className="flex-1 p-6">
           <div className="flex justify-between items-center mb-6">
             <h1 className="text-2xl font-bold">DASHBOARD</h1>
