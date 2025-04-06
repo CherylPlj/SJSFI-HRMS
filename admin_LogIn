@@ -1,0 +1,84 @@
+"use client";
+import React from 'react';
+import Head from 'next/head';
+
+
+export default function AdminLogin() {
+  const handleSubmit = async (event : any) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message); // Login successful
+      } else {
+        alert(data.message); // Invalid email or password
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again.');
+    }
+  };
+
+  return (
+    <div className="flex justify-end min-h-screen bg-[url('/portalBG.png')] bg-cover bg-center">
+      <div className="w-1/2 max-w-xl bg-white p-8 bg-opacity-75 backdrop-blur-sm">
+        <Head>
+          <title>Admin Login</title>
+          <meta name="description" content="Admin login page" />
+          <link rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        </Head>
+        <div className="mb-4 text-center bg">
+          <img src="/sjsfilogo.png" alt="Logo" className="mx-auto h-50 w-50 py-10" />
+        </div>
+        <h1 className="text-4xl font-bold mb-4 text-center text-[#800000]">
+        <a href="#" className="text-black hover:text-gray-700">
+            <i className="fas fa-arrow-left pr-10 text-black"></i>
+        </a>
+        SAINT JOSEPH SCHOOL OF FAIRVIEW INC.
+        </h1>
+        <h1 className="text-2xl font-bold mb-4 text-center">Admin Login</h1>
+        <h1 className="text-1xl font-regular mb-4 text-center">Sign in to your account.</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email<span className="text-red-500">*</span></label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password<span className="text-red-500">*</span></label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              required 
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+            />
+          </div>
+          <h1 className="text-1xl py-5 font-regular mb-4 text-center">Forgot Password?Click <a href ="/reset_password" className="text-[#800000] font-bold">Here</a></h1>
+          <button type="submit" className="w-full py-2 px-4 bg-[#800000] text-white rounded hover:bg-[#800000]-700">Sign In</button>
+          <p className="mt-6 text-center text-xs text-gray-500">
+            By using this service, you understood and agree to the SJSFI Online Services
+            <a className="text-blue-500 underline" href="#">
+              Terms of Use
+            </a> and <a className="text-blue-500 underline" href="#">Privacy Statement</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+}  
