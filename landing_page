@@ -1,0 +1,76 @@
+'use client';
+import Head from 'next/head';
+import { useRouter } from 'next/navigation';
+
+export default function Home() {
+  const router = useRouter();
+
+  const navigateToFaculty = () => {
+    router.push('/Facultylogin'); // Corrected path with leading slash
+  };
+  
+  const navigateToAdmin = () => {
+    router.push('/AdminLogin'); // Corrected path with leading slash
+  };
+  
+  return (
+    <>
+      <Head>
+        <title>Saint Joseph School of Fairview Inc.</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          rel="stylesheet"
+        />
+      </Head>
+
+      {/* Main layout */}
+      <div className="flex min-h-screen">
+        
+        {/* Left side with full background image */}
+        <div className="w-1/2 bg-white flex items-center justify-center">
+          <img
+            src="/dotsBG.png"
+            alt="Background dots"
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+        {/* Right side with content */}
+        <div className="w-1/2 bg-white flex flex-col items-center justify-start p-8 mt-10 ">
+          <img
+            alt="Saint Joseph School of Fairview Inc. logo"
+            className="mx-auto mb-4 -mt-10"
+            height="300"
+            width="300"
+            src="/sjsfilogo.png"
+          />
+          <h1 className="text-4xl md:text-4xl font-bold text-[#800000] mb-2 p-10">
+            SAINT JOSEPH SCHOOL OF FAIRVIEW INC.
+          </h1>
+          <h2 className="text-lg md:text-xl font-semibold text-black mb-4">
+            Human Resource Management System
+          </h2>
+          <p className="text-md md:text-lg text-gray-700 mb-10 ">
+            Select your role in accessing the site.
+          </p>
+          <div className="flex flex-col items-center space-y-6">
+            <button
+                onClick={navigateToFaculty}
+                className="w-[680px] md:w-[480px] py-3 border-2 border-[#800000] text-[#800000] rounded-full text-lg md:text-xl transition-all duration-300 hover:bg-[#800000] hover:text-white"
+            >
+                Faculty
+            </button>
+            <button
+                onClick={navigateToAdmin}
+                className="w-[680px] md:w-[480px] py-3 border-2 border-[#800000] text-[#800000] rounded-full text-lg md:text-xl transition-all duration-300 hover:bg-[#800000] hover:text-white"
+            >
+                Administrator
+            </button>
+         </div>
+        </div>
+      </div>
+    </>
+  );
+}
