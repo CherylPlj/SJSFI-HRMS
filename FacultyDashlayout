@@ -1,10 +1,13 @@
+"use client";
+
 import Head from 'next/head';
 import { useState } from 'react';
+
 
 export default function Dashboard() {
   const [activeButton, setActiveButton] = useState('dashboard'); // Default active button
 
-  const handleButtonClick = (buttonName) => {
+  const handleButtonClick = (buttonName : any) => {
     setActiveButton(buttonName); // Set the clicked button as active
   };
 
@@ -15,7 +18,7 @@ export default function Dashboard() {
         <script src="https://cdn.tailwindcss.com"></script>
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/font-awesome.min.css"
         />
       </Head>
       <div className="flex h-screen bg-gray-100 font-sans">
@@ -23,7 +26,7 @@ export default function Dashboard() {
         <div className="bg-white w-20 p-4 flex flex-col justify-between border-r border-gray-200">
           <div>
             {/* Replace SJSFI HRMS with a logo */}
-            <img src="/SJSLOGO-removebg-preview.png" alt="Logo" className="w-10 h-10 mx-auto mb-6" />
+            <img src="/sjsfilogo.png" alt="Logo" className="w-10 h-10 mx-auto mb-6" />
             <nav className="space-y-6">
               <a
                 href="#"
@@ -77,7 +80,7 @@ export default function Dashboard() {
                 title="Leave Request"
                 onClick={() => handleButtonClick('leave')}
               >
-            <i class="fas fa-envelope text-xl"></i>                
+            <i className="fas fa-envelope text-xl"></i>                
             <span className="text-[10px] whitespace-nowrap">Leave Request</span>
               </a>
             </nav>
