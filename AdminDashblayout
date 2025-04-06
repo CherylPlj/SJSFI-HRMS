@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function Dashboard() {
   const [activeButton, setActiveButton] = useState(''); // State to track the active button
 
-  const handleButtonClick = (buttonName : Any) => {
+  const handleButtonClick = (buttonName : any) => {
     setActiveButton(buttonName); // Set the clicked button as active
   };
   
