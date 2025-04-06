@@ -66,7 +66,7 @@ export default function Dashboard() {
                 title="Leave"
                 onClick={() => handleButtonClick('leave')}
               >
-                <i className="fas fa-request-alt text-xl"></i>
+                <i class="fas fa-clipboard"></i>                
                 <span className="text-[10px]">Leave</span>
               </a>
               <a
