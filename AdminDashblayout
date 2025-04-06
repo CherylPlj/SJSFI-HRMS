@@ -1,10 +1,11 @@
+"use client";
 import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Dashboard() {
   const [activeButton, setActiveButton] = useState(''); // State to track the active button
 
-  const handleButtonClick = (buttonName) => {
+  const handleButtonClick = (buttonName : Any) => {
     setActiveButton(buttonName); // Set the clicked button as active
   };
   
@@ -23,7 +24,7 @@ export default function Dashboard() {
         <div className="bg-red-800 text-white w-20 p-4 flex flex-col items-center">          
         <div className="mb-4">            
           {/* Replace SJSFI HRMS with a logo */}
-            <img src="/SJSLOGO-removebg-preview.png" alt="Logo" className="w-10 h-10 mx-auto mb-6" />
+            <img src="/sjsfilogo.png" alt="Logo" className="w-10 h-10 mx-auto mb-6" />
             <nav className="space-y-6">
               <a
                 href="#"
@@ -66,7 +67,7 @@ export default function Dashboard() {
                 title="Leave"
                 onClick={() => handleButtonClick('leave')}
               >
-                <i class="fas fa-clipboard"></i>                
+                <i className="fas fa-clipboard"></i>                
                 <span className="text-[10px]">Leave</span>
               </a>
               <a
