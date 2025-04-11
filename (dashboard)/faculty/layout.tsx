@@ -51,7 +51,7 @@ export default function FacultyDashboard() {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
       </Head>
-      <div className="flex h-screen bg-gray-100 font-sans">
+      <div className="flex h-screen overflow-hidden bg-gray-100 font-sans">
         {/* Sidebar */}
         <div className="bg-white w-20 p-4 flex flex-col justify-between border-r border-gray-200">
           <div>
