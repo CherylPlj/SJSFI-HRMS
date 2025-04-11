@@ -23,25 +23,25 @@ export default function AdminLogin({ children }: { children: React.ReactNode }):
         />
       </Head>
 
-      <div className="bg-white flex items-start justify-end min-h-screen">
-        <div className="bg-white w-full max-w-4xl shadow-lg">
+      <div className="flex justify-end min-h-screen bg-[url('/portalBG.png')] bg-cover bg-center">
+        <div className="w-2/3 max-w-2xl bg-white p-8 bg-opacity-75 backdrop-blur-sm">
           <div className="w-full p-8">
             <div className="flex justify-center mb-4">
               <img
                 alt="Saint Joseph School of Fairview Inc. logo"
-                className="w-24 h-24"
+                className="mx-auto h-50 w-50 py-5"
                 src="/sjsfilogo.png"
               />
             </div>
 
-            <h1 className="text-center text-2xl font-bold text-red-700 mb-2">
+            <h1 className="text-4xl font-bold mb-4 text-center text-[#800000]">
               SAINT JOSEPH SCHOOL OF FAIRVIEW INC.
             </h1>
 
             <div className="flex items-center justify-center mb-4">
               <button
                 onClick={() => window.history.back()} // Go back to the previous page
-                className="text-red-700 hover:text-red-800 mr-4"
+                className="text-[#800000] hover:text-red-800 mr-4"
                 aria-label="Go Back"
               >
                 <i className="fas fa-arrow-left text-xl"></i>
@@ -49,13 +49,11 @@ export default function AdminLogin({ children }: { children: React.ReactNode }):
               <h2 className="text-center text-xl font-bold text-black">Admin Login</h2>
             </div>
 
-            <p className="text-center text-black mb-6">Sign in to your account.</p>
+            <p className="text-center text-black mb-6 pt-5">Sign in to your account.</p>
 
             <form>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="email">
-                  Email *
-                </label>
+              <label htmlFor="email" className="block text-sm font-medium text-black-700">Email<span className="text-red-500">*</span></label>
                 <input
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                   id="email"
@@ -66,9 +64,7 @@ export default function AdminLogin({ children }: { children: React.ReactNode }):
               </div>
 
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="password">
-                  Password *
-                </label>
+              <label htmlFor="password" className="block text-sm font-medium text-black-700">Password<span className="text-red-500">*</span></label>
                 <div className="relative mt-1">
                   <input
                     className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
@@ -83,15 +79,11 @@ export default function AdminLogin({ children }: { children: React.ReactNode }):
                 </div>
               </div>
 
-              <div className="mb-4 text-right">
-                <a className="text-red-700 font-semibold" href="#">
-                  Forgot Password? Click Here
-                </a>
-              </div>
+              <h1 className="text-1xl py-5 font-regular mb-4 text-center">Forgot Password?Click <a href ="/reset_password" className="text-[#800000] font-bold ">Here</a></h1>
 
               <div>
                 <button
-                  className="w-full bg-red-700 text-white py-2 rounded-md font-semibold hover:bg-red-800"
+                  className="w-full bg-[#800000] text-white py-2 rounded-md font-semibold hover:bg-red-800"
                   type="button"
                   onClick={handleSignIn} // Call SignIn function on click
                 >
