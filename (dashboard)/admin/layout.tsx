@@ -186,9 +186,9 @@ export default function Dashboard() {
           </div>
           {/* Main Content */}
           <div className="flex-1 p-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
             {renderContent()} {/* Render the content dynamically based on activeButton */}
-            </div>
+  
           </div>
         </div>
       </div>
